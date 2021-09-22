@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.7.23)  21 SEP 2021 20:05
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.7.23)  22 SEP 2021 14:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -28,8 +28,8 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
@@ -1262,32 +1262,32 @@ LaTeX Warning: Unused global option(s):
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 62.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    ... okay on input line 62.
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 57.
+Package hyperref Info: Link coloring ON on input line 62.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1295,9 +1295,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count377
 )
-LaTeX Info: Redefining \ref on input line 57.
-LaTeX Info: Redefining \pageref on input line 57.
-LaTeX Info: Redefining \nameref on input line 57.
+LaTeX Info: Redefining \ref on input line 62.
+LaTeX Info: Redefining \pageref on input line 62.
+LaTeX Info: Redefining \nameref on input line 62.
  (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
@@ -1322,12 +1322,12 @@ LaTeX Info: Redefining \nameref on input line 57.
 * \topmargin=-42.26999pt
 * \headheight=40.0pt
 * \headsep=10.0pt
-* \topskip=11.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=113.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=121.0pt
+* \marginparsep=11.0pt
 * \columnsep=24.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1340,7 +1340,7 @@ LaTeX Info: Redefining \nameref on input line 57.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package caption Info: We need package `ragged2e' on input line 57.
+Package caption Info: We need package `ragged2e' on input line 62.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
  (/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everysel.sty
@@ -1365,461 +1365,413 @@ LaTeX Info: Redefining \selectfont on input line 126.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 57.
+(lastpage)             ! on input line 62.
 \symmathhangul=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `mathhangul' in version `bold'
-(Font)                  TU/BareunBatangL(0)/m/n --> TU/BareunBatangL(0)/bx/n on input line 57.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 59.
+(Font)                  TU/BareunBatangL(0)/m/n --> TU/BareunBatangL(0)/bx/n on input line 62.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 64.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 59.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 64.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 59.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 64.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 59.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 64.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 64.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 64.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 64.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.47603> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.44003> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 
-Overfull \hbox (36.968pt too wide) in paragraph at lines 59--59
+Overfull \hbox (36.77168pt too wide) in paragraph at lines 64--64
 [][]  [] 
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 69.
+(./report.toc (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 ) [1
 
-]
-Overfull \hbox (2.57098pt too wide) in paragraph at lines 73--74
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 Linear Mixed Effect Model\TU/BareunBatangL(0)/m/n/10.95 ; 일 반 화 선 형 혼 합 모 형) 을 이 용 한 예 측 을 제 안 하 고 자 한 다. \TU/TimesNewRomanPSMT(0)/m/n/10.95 GLMM
- []
+])
+\tf@toc=\write5
+\openout5 = `report.toc'.
+
+
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 85.
 
 [2]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 89.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 96.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [3]
-Underfull \vbox (badness 1776) has occurred while \output is active []
-
- [4]
-Overfull \hbox (14.08212pt too wide) in paragraph at lines 138--140
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 Quadrature\TU/BareunBatangL(0)/m/n/10.95 ) 나 라 플 라 스 근 사, \TU/TimesNewRomanPSMT(0)/m/n/10.95 MCMC\TU/BareunBatangL(0)/m/n/10.95 (\TU/TimesNewRomanPSMT(0)/m/n/10.95 Markov Chain Monte Carlo Simulation\TU/BareunBatangL(0)/m/n/10.95 ), \TU/TimesNewRomanPSMT(0)/m/n/10.95 MCEM\TU/BareunBatangL(0)/m/n/10.95 (\TU/TimesNewRomanPSMT(0)/m/n/10.95 Monte
+Overfull \hbox (6.35419pt too wide) in paragraph at lines 144--146
+\TU/BareunBatangL(0)/m/n/10 대 부 분 의 경 우 위 식 의 적 분 이 닫 힌 형 태 로 구 해 지 지 않 으 므 로 \TU/TimesNewRomanPSMT(0)/m/n/10 adaptive GHQ\TU/BareunBatangL(0)/m/n/10 (\TU/TimesNewRomanPSMT(0)/m/n/10 Gauss-Hermite Quadrature\TU/BareunBatangL(0)/m/n/10 )
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
-[]|\TU/AppleSDGothicNeo-Regular(0)/m/n/10.95 AC$[]$,
+
+Overfull \hbox (1.5171pt too wide) in paragraph at lines 144--146
+\TU/BareunBatangL(0)/m/n/10 나 라 플 라 스 근 사, \TU/TimesNewRomanPSMT(0)/m/n/10 MCMC\TU/BareunBatangL(0)/m/n/10 (\TU/TimesNewRomanPSMT(0)/m/n/10 Markov Chain Monte Carlo Simulation\TU/BareunBatangL(0)/m/n/10 ), \TU/TimesNewRomanPSMT(0)/m/n/10 MCEM\TU/BareunBatangL(0)/m/n/10 (\TU/TimesNewRomanPSMT(0)/m/n/10 Monte Carlo Expectation
  []
 
-[6]
+[4] [5]
 File: ./Figure/LFP_raw.pdf Graphic file (type pdf)
 <use ./Figure/LFP_raw.pdf>
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 188.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 188.
- [7] [8]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 194.
+ [6] [7]
 File: ./Figure/EDA.pdf Graphic file (type pdf)
 <use ./Figure/EDA.pdf>
- [9] [10]
-Overfull \hbox (31.79034pt too wide) in paragraph at lines 271--272
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Elastic net \TU/BareunBatangL(0)/m/n/10.95 은 기 존 의 \TU/TimesNewRomanPSMT(0)/m/n/10.95 ridge regression \TU/BareunBatangL(0)/m/n/10.95 과 \TU/TimesNewRomanPSMT(0)/m/n/10.95 LASSO\TU/BareunBatangL(0)/m/n/10.95 (\TU/TimesNewRomanPSMT(0)/m/n/10.95 Least Absolute Shrinkage and Selection Operator\TU/BareunBatangL(0)/m/n/10.95 )
- []
-
-[11]
+ [8] [9] [10]
 File: ./Figure/Enet.pdf Graphic file (type pdf)
 <use ./Figure/Enet.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
+ [11]
 File: ./Figure/tune.pdf Graphic file (type pdf)
 <use ./Figure/tune.pdf>
- [13] [14] [15]
+ [12] [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [14]
 File: ./Figure/Rplot.pdf Graphic file (type pdf)
 <use ./Figure/Rplot.pdf>
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-[]|\TU/AppleSDGothicNeo-Regular(0)/m/n/10.95 AC$[]$high
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+[]|\TU/AppleSDGothicNeo-Regular(0)/m/n/10 PFC$[]$high
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-[]|\TU/AppleSDGothicNeo-Regular(0)/m/n/10.95 AC$[]$high
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+[]|\TU/AppleSDGothicNeo-Regular(0)/m/n/10 PPC$[]$high
+ []
+
+[15] [16] [17]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 463.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--471
+
+ []
+
+[18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 522--524
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-[]|\TU/AppleSDGothicNeo-Regular(0)/m/n/10.95 PFC$[]$high
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 427--427
-[]|\TU/AppleSDGothicNeo-Regular(0)/m/n/10.95 PPC$[]$high
- []
-
-
-Underfull \vbox (badness 2269) has occurred while \output is active []
-
- [17] [18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 463--465
+Underfull \hbox (badness 10000) in paragraph at lines 556--558
 
  []
 
 [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 518--520
+Underfull \hbox (badness 10000) in paragraph at lines 593--595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--612
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 554--556
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 594--596
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 599--600
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--613
+Underfull \hbox (badness 10000) in paragraph at lines 619--620
 
  []
 
 
-Underfull \vbox (badness 4084) has occurred while \output is active []
+Underfull \vbox (badness 2818) has occurred while \output is active []
 
- [25]
-Underfull \hbox (badness 10000) in paragraph at lines 620--622
+ [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 695--696
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 707--709
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 749--751
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--631
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
 
-Underfull \vbox (badness 4805) has occurred while \output is active []
-
- [26] [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 708--709
+Underfull \hbox (badness 10000) in paragraph at lines 756--757
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 720--722
-
- []
-
-[29] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 763--765
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 768--769
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 770--771
-
- []
-
-[32] (./report.bbl
+[28] (./report.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 5--8
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Agresti, A., J. G. Booth*, J. P. Hobert*, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 B. Caffo*, 2000 Random-effects modeling of
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Agresti, A., J. G. Booth*, J. P. Hobert*, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 B. Caffo*, 2000 Random-effects modeling of categorical
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Baker, S. N., 2007 Oscillatory interactions between sensorimotor cortex and the periphery.
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Baker, S. N., 2007 Oscillatory interactions between sensorimotor cortex and the periphery. Current
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--18
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Beyer, K., J. Goldstein, R. Ramakrishnan, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 U. Shaft, 1999 When is “nearest neighbor”
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Beyer, K., J. Goldstein, R. Ramakrishnan, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 U. Shaft, 1999 When is “nearest neighbor” meaningful?
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Bickel, P. J. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 K. A. Doksum, 2015 \TU/TimesNewRomanPSMT(0)/m/it/10.95 Mathematical statistics: basic ideas and selected topics,
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Bickel, P. J. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 K. A. Doksum, 2015 \TU/TimesNewRomanPSMT(0)/m/it/10 Mathematical statistics: basic ideas and selected topics, volume I\TU/TimesNewRomanPSMT(0)/m/n/10 ,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--27
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Bohórquez, J. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 Ö. Özdamar, 2008 Generation of the 40-hz auditory steady-state response
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Bohórquez, J. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 Ö. Özdamar, 2008 Generation of the 40-hz auditory steady-state response (assr)
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 30--33
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Capanu, M., M. Gönen, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 C. B. Begg, 2013 An assessment of estimation methods for
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Capanu, M., M. Gönen, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 C. B. Begg, 2013 An assessment of estimation methods for generalized
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--33
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 generalized linear mixed models with binary outcomes. Statistics in medicine \TU/BareunBatangL(0)/bx/n/10.95 32\TU/TimesNewRomanPSMT(0)/m/n/10.95 :
- []
-
-[33]
 Underfull \hbox (badness 10000) in paragraph at lines 35--38
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Chicco, D. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 G. Jurman, 2020 The advantages of the matthews correlation coefficient (mcc)
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Chicco, D. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 G. Jurman, 2020 The advantages of the matthews correlation coefficient (mcc) over f1
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--45
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Cohen, L. T., F. W. Rickards, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 G. M. Clark, 1991 A comparison of steady-state evoked
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Cohen, L. T., F. W. Rickards, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 G. M. Clark, 1991 A comparison of steady-state evoked potentials to
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--45
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 potentials to modulated tones in awake and sleeping humans. The Journal of the Acoustical
+\TU/TimesNewRomanPSMT(0)/m/n/10 modulated tones in awake and sleeping humans. The Journal of the Acoustical Society of America
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--51
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Cone-Wesson, B., R. C. Dowell, D. Tomlin, G. Rance, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 W. J. Ming, 2002 The auditory
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Cone-Wesson, B., R. C. Dowell, D. Tomlin, G. Rance, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 W. J. Ming, 2002 The auditory steady-state
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--51
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 steady-state response: comparisons with the auditory brainstem response. Journal of the
+\TU/TimesNewRomanPSMT(0)/m/n/10 response: comparisons with the auditory brainstem response. Journal of the American Academy of
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 53--56
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Crick, F. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 C. Koch, 1990 Towards a neurobiological theory of consciousness. In \TU/TimesNewRomanPSMT(0)/m/it/10.95 Seminars in
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Crick, F. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 C. Koch, 1990 Towards a neurobiological theory of consciousness. In \TU/TimesNewRomanPSMT(0)/m/it/10 Seminars in the
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 58--60
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Cybenko, G., 1989 Approximation by superpositions of a sigmoidal function. Mathematics of
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Cybenko, G., 1989 Approximation by superpositions of a sigmoidal function. Mathematics of Control,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 66--68
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Ehlers, C. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 D. Kupfer, 1997 Slow-wave sleep: do young adult men and women age
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Ehlers, C. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 D. Kupfer, 1997 Slow-wave sleep: do young adult men and women age differently?
  []
 
-
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 70--72
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Fisher, R. A., 1936 The use of multiple measurements in taxonomic problems. Annals of
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Fisher, R. A., 1936 The use of multiple measurements in taxonomic problems. Annals of eugenics \TU/BareunBatangL(0)/bx/n/10 7\TU/TimesNewRomanPSMT(0)/m/n/10 :
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 75--78
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Friedman, J., T. Hastie, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 R. Tibshirani, 2010 Regularization paths for generalized linear
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Friedman, J., T. Hastie, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 R. Tibshirani, 2010 Regularization paths for generalized linear models via
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 81--84
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Galambos, R., S. Makeig, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 P. J. Talmachoff, 1981 A 40-hz auditory potential recorded from
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Galambos, R., S. Makeig, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 P. J. Talmachoff, 1981 A 40-hz auditory potential recorded from the
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 87--90
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Han, H.-B., K. E. Lee, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 J. H. Choi, 2019 Functional dissociation of $\OML/ztmcm/m/it/10.95 ^^R$ \TU/TimesNewRomanPSMT(0)/m/n/10.95 oscillations in the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 frontal and visual cortices and their long-range network during sustained attention. eNeuro
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Han, H.-B., K. E. Lee, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 J. H. Choi, 2019 Functional dissociation of $\OML/ztmcm/m/it/10 ^^R$ \TU/TimesNewRomanPSMT(0)/m/n/10 oscillations in the frontal and
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--94
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Hanin, B. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 M. Sellke, 2017 Approximating continuous functions by relu nets of minimal
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Hanin, B. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 M. Sellke, 2017 Approximating continuous functions by relu nets of minimal width. arXiv
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 96--99
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 John, M. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 T. Picton, 2000 Master: a windows program for recording multiple auditory
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 John, M. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 T. Picton, 2000 Master: a windows program for recording multiple auditory steady-state
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 101--103
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Kidger, P. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 T. Lyons, 2019 Universal approximation with deep narrow networks. arXiv
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Kuwada, S., R. Batra, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 V. L. Maher, 1986 Scalp potentials of normal and hearing-impaired
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Kidger, P. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 T. Lyons, 2019 Universal approximation with deep narrow networks. arXiv preprint
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 106--109
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 subjects in response to sinusoidally amplitude-modulated tones. Hearing research \TU/BareunBatangL(0)/bx/n/10.95 21\TU/TimesNewRomanPSMT(0)/m/n/10.95 :
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Kuwada, S., R. Batra, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 V. L. Maher, 1986 Scalp potentials of normal and hearing-impaired subjects in
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 112--115
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Lawhern, V., W. D. Hairston, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 K. Robbins, 2013 Detect: A matlab toolbox for event
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--115
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 detection and identification in time series, with applications to artifact detection in eeg
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Lawhern, V., W. D. Hairston, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 K. Robbins, 2013 Detect: A matlab toolbox for event detection and
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 118--121
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Leshno, M., V. Y. Lin, A. Pinkus, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 S. Schocken, 1993 Multilayer feedforward networks with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--121
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 a nonpolynomial activation function can approximate any function. Neural networks \TU/BareunBatangL(0)/bx/n/10.95 6\TU/TimesNewRomanPSMT(0)/m/n/10.95 :
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Leshno, M., V. Y. Lin, A. Pinkus, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 S. Schocken, 1993 Multilayer feedforward networks with a
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 123--125
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Lin, Y. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 Y. Jeon, 2006 Random forests and adaptive nearest neighbors. Journal of the
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Lin, Y. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 Y. Jeon, 2006 Random forests and adaptive nearest neighbors. Journal of the American
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 127--130
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 McCulloch, C. E. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 J. M. Neuhaus, 2011 Prediction of random effects in linear and
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 McCulloch, C. E. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 J. M. Neuhaus, 2011 Prediction of random effects in linear and generalized linear
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 132--134
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Miller, S. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 D. Childers, 2012 \TU/TimesNewRomanPSMT(0)/m/it/10.95 Probability and random processes: With applications to signal
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Miller, S. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 D. Childers, 2012 \TU/TimesNewRomanPSMT(0)/m/it/10 Probability and random processes: With applications to signal
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 137--140
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Mognon, A., J. Jovicich, L. Bruzzone, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 M. Buiatti, 2011 Adjust: An automatic eeg artifact
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--140
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 detector based on the joint use of spatial and temporal features. Psychophysiology \TU/BareunBatangL(0)/bx/n/10.95 48\TU/TimesNewRomanPSMT(0)/m/n/10.95 :
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Mognon, A., J. Jovicich, L. Bruzzone, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 M. Buiatti, 2011 Adjust: An automatic eeg artifact detector
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 143--146
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Nolan, H., R. Whelan, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 R. B. Reilly, 2010 Faster: fully automated statistical thresholding for
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Nolan, H., R. Whelan, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 R. B. Reilly, 2010 Faster: fully automated statistical thresholding for eeg
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 149--153
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Picton, T. W., C. R. Skinner, S. C. Champagne, A. J. Kellett, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 A. C. Maiste, 1987 Potentials
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Picton, T. W., C. R. Skinner, S. C. Champagne, A. J. Kellett, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 A. C. Maiste, 1987 Potentials evoked
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 149--153
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 evoked by the sinusoidal modulation of the amplitude or frequency of a tone. The Journal
+\TU/TimesNewRomanPSMT(0)/m/n/10 by the sinusoidal modulation of the amplitude or frequency of a tone. The Journal of the Acoustical
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 155--157
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Pinheiro, J. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 D. Bates, 2006 \TU/TimesNewRomanPSMT(0)/m/it/10.95 Mixed-effects models in S and S-PLUS\TU/TimesNewRomanPSMT(0)/m/n/10.95 . Springer Science &
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--162
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Rickards, F. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 G. M. Clark, 1982 Steady state evoked potentials to amplitude modulated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--172
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Shoker, L., S. Sanei, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 J. Chambers, 2005 Artifact removal from electroencephalograms
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Pinheiro, J. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 D. Bates, 2006 \TU/TimesNewRomanPSMT(0)/m/it/10 Mixed-effects models in S and S-PLUS\TU/TimesNewRomanPSMT(0)/m/n/10 . Springer Science & Business
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Rickards, F. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 G. M. Clark, 1982 Steady state evoked potentials to amplitude modulated tones.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--172
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Shoker, L., S. Sanei, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 J. Chambers, 2005 Artifact removal from electroencephalograms using a hybrid
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 179--181
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Subha, D. P., P. K. Joseph, R. Acharya, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 C. M. Lim, 2010 Eeg signal analysis: a survey.
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Subha, D. P., P. K. Joseph, R. Acharya, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 C. M. Lim, 2010 Eeg signal analysis: a survey. Journal of
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 184--187
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Tuerlinckx, F., F. Rijmen, G. Verbeke, \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 P. De Boeck, 2006 Statistical inference in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--187
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 generalized linear mixed models: A review. British Journal of Mathematical and Statistical
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Tuerlinckx, F., F. Rijmen, G. Verbeke, \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 P. De Boeck, 2006 Statistical inference in generalized linear
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 193--195
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Vertes, R. P., 2005 Hippocampal theta rhythm: A tag for short-term memory. Hippocampus
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Vertes, R. P., 2005 Hippocampal theta rhythm: A tag for short-term memory. Hippocampus \TU/BareunBatangL(0)/bx/n/10 15\TU/TimesNewRomanPSMT(0)/m/n/10 :
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 197--201
-[]\TU/TimesNewRomanPSMT(0)/m/n/10.95 Zhang, D. \TU/BareunBatangL(0)/m/n/10.95 & \TU/TimesNewRomanPSMT(0)/m/n/10.95 X. Lin, 2008 Variance component testing in generalized linear mixed models for
+[]\TU/TimesNewRomanPSMT(0)/m/n/10 Zhang, D. \TU/BareunBatangL(0)/m/n/10 & \TU/TimesNewRomanPSMT(0)/m/n/10 X. Lin, 2008 Variance component testing in generalized linear mixed models for
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 197--201
-\TU/TimesNewRomanPSMT(0)/m/n/10.95 longitudinal/clustered data and other related topics. In \TU/TimesNewRomanPSMT(0)/m/it/10.95 Random effect and latent variable
+\TU/TimesNewRomanPSMT(0)/m/n/10 longitudinal/clustered data and other related topics. In \TU/TimesNewRomanPSMT(0)/m/it/10 Random effect and latent variable model
  []
 
 ) 
 AED: lastpage setting LastPage
-[36]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 798.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 798.
+[31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 785.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 785.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 798.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 798.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 785.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 785.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 798.
+(rerunfilecheck)             Checksum: 012667BA32D2FBFE6FDFE4909CD7B0F5.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.55997pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 785.
  ) 
 Here is how much of TeX's memory you used:
- 41025 strings out of 492916
- 758223 string characters out of 6133345
- 873505 words of memory out of 5000000
- 44422 multiletter control sequences out of 15000+600000
- 567989 words of font info for 171 fonts, out of 8000000 for 9000
+ 41050 strings out of 492916
+ 758615 string characters out of 6133345
+ 881527 words of memory out of 5000000
+ 44444 multiletter control sequences out of 15000+600000
+ 571359 words of font info for 181 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 62i,15n,94p,1982b,2560s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,94p,1977b,2560s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (36 pages).
+Output written on report.pdf (31 pages).

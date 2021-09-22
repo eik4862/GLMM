@@ -1,4 +1,4 @@
-\documentclass[11pt,onecolumn,twoside,a4size]{gsag3jnl}
+\documentclass[10pt,onecolumn,twoside,a4size]{gsag3jnl}
 
 \articletype{inv} % article type
 % {inv} Investigations
@@ -24,13 +24,18 @@
 \newcommand{\PPCL}{PPC\textsubscript{L}}
 \newcommand{\iid}{\stackrel{\mathrm{iid}}{\sim}}
 \newcommand{\proof}{\texttt{\textit{\textbf{Proof }}}}
+\newcommand{\fakesection}[1]{%
+  \par\refstepcounter{section}% Increase section counter
+  \addcontentsline{toc}{section}{\protect#1}% Add section to ToC
+  % Add more content here, if needed.
+}
 
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
 
 \linespread{1.5}
 \graphicspath{{./Figure/}}
-\title{일반화 선형혼합모형을 이용한 청성안정유발반응 연구}
+\title{일반화 선형혼합모형(GLMM)을 이용한 청성안정유발반응(ASSR) 연구}
 
 \author[1]{박상현}
 \author[$\ast$,1]{장원철}
@@ -40,7 +45,7 @@
 
 \keywords{GLMM \\ ASSR \\ Prediction model}
 
-\runningtitle{일반화 선형혼합모형을 이용한 청성안정유발반응 연구} % For use in the footer 
+\runningtitle{일반화 선형혼합모형(GLMM)을 이용한 청성안정유발반응(ASSR) 연구} % For use in the footer 
 
 %% For the footnote.
 %% Give the last name of the first author if only one author;
@@ -51,7 +56,7 @@
 \runningauthor{박상현, 장원철}
 
 \begin{abstract}
-본 연구에서는 청성안정유발반응(auditory steady state evoked responses; ASSR)을 통해 측정된 뇌전도으로 행동을 예측하는 모형을 통해 청각 피질(auditory cortex; AC), 전두엽 피질(prefrontal cortex; PFC) 및 두정엽 피질(posterior parietal cortex; PPC)의 뇌전도가 생쥐의 행동 결정에 어떤 방식으로 연관되는지를 밝히려고 시도하였다. 이를 위해 기존 예측 모형의 한계를 지적하고 개선된 예측 모형인 일반화 선형혼합모형(generalized mixed effect model; GLMM)을 제안한다. GLMM은 고정효과(fixed effect)와 임의효과(random effect)를 모두 고려함으로써 반복측정으로 인한 상관관계 구조를 반영할 수 있고, 결과적으로 약 .925의 F score를 보였다.
+본 연구에서는 청성안정유발반응(auditory steady state evoked responses; ASSR)을 통해 측정된 뇌전도로 행동을 예측하는 모형을 통해 청각 피질(auditory cortex; AC), 전두엽 피질(prefrontal cortex; PFC) 및 두정엽 피질(posterior parietal cortex; PPC)의 뇌전도가 생쥐의 행동 결정에 어떤 방식으로 연관되는지를 밝히려고 시도하였다. 이를 위해 기존 예측 모형의 한계를 지적하고 개선된 예측 모형인 일반화 선형혼합모형(generalized mixed effect model; GLMM)을 제안한다. GLMM은 고정효과(fixed effect)와 랜덤효과(random effect)를 모두 고려함으로써 반복측정으로 인한 상관관계 구조를 반영할 수 있고, 결과적으로 약 .925의 F score를 보였다.
 \end{abstract}
 
 \begin{document}
@@ -66,16 +71,18 @@
 \correspondingauthoraffiliation{1}{교신저자: 박상현, 대한민국 서울특별시 08826, 서울대학교 자연과학대학 통계학과, Email: lkd1962@naver.com}
 \vspace{-34pt}% Only used for adjusting extra space in the left column of the first pages
 
-\section{서론}
+\setcounter{tocdepth}{2}
+\sffamily
+\tableofcontents
 
+\normalfont
+\section{서론}
 \texttt{ASSR}(\texttt{Auditory Steady State Evoked Responses}; 청성안정유발반응) 실험은 주기적으로 빠르게 반복되는 청각 자극에 대한 \texttt{EEG}(\texttt{Electroencephalography})나 \texttt{LFP}(\texttt{Local Field Potential})를 관측하는 실험이다 \texttt{\citep{bohorquez2008generation}}. 1981년 \texttt{Galambos}와 동료들이 40\texttt{Hz}대의 청각 자극에서 안정파 유발반응(\texttt{steady state evoked potential})을 보고한 것을 시작으로 \texttt{\citep{galambos198140}}, \texttt{Rickards, Piocton, Choen} 등이 다양한 주파수에서의 \texttt{ASSR} 반응을 광범위하게 연구하며 신경과학 및 청각 임상에서의 표준적인 실험절차로 자리잡게 되었다 \texttt{\citep{rickards1982steady, picton1987potentials, kuwada1986scalp, cohen1991comparison}}. 특히 이는 다른 자극과는 달리 주어진 주파수에 해당하는 와우(\texttt{cochlea})의 좁은 부위를 자극하여 주파수 특이성이 높고 \texttt{\citep{john2000master}}, 반응의 자동탐지 알고리즘이 잘 개발되어 객관적인 반응 탐지가 가능하다는 장점이 있다 \texttt{\citep{cone2002auditory}}.
  
 본 연구에서는 독립성 가정이 위배된다는 점을 해결할 수 있는 방안으로 \texttt{GLMM}(\texttt{Generalized Linear Mixed Effect Model}; 일반화 선형혼합모형)을 이용한 예측을 제안하고자 한다. \texttt{GLMM}은 오차항이 하나인 $t$ 검정이나 \texttt{Wilcoxon} 부호순위합 검정의 모형과는 달리 여러 개의 오차항을 동시에 고려할 수 있는 일반적인 통계 모형으로 반복측정으로 인해 생기는 종속성을 서로 독립으로 간주할 수 있는 여러 개의 오차 원인으로 분해하여 모형에 반영한다 \texttt{\citep{pinheiro2006mixed, agresti2000random}}. 나아가, \texttt{GLMM}은 예측 모형으로도 활용될 수 있다는 장점을 가진다. 물론 예측만을 위한 \texttt{ANN}(\texttt{Artificial Neural Network}) 등의 비모수적 방법이 계산 신경과학 분야에서 널리 이용되고 있지만, 이가 가지는 본질적인 해석의 어려움 때문에 통계적 추론이 필요한 분야에까지 적용되기는 쉽지 않다. \texttt{GLMM}은 모수적인 모형으로서 해석의 용이함을 유지하면서 예측 모형으로도 나쁘지 않은 성능을 발휘한다.
 
 \section{모형 적합}
 \subsection{GLMM 모형}
-설득력 있는 통계적 결과를 위해서는 특정 뇌 활동이 조건부로 주어진 경우에 대한 추론이 적합한데, 이는 \texttt{GLM}(\texttt{Generalized Linear Model}; 일반화 선형모형)의 로지스틱 회귀분석을 통해 가능하다. 그러나 로지스틱 회귀분석도 각 관측값이 독립일 것을 요구하고, 이 역시 중요한 가정이므로 곧바로 적용하기는 쉽지 않다. 이에 대한 대안으로, 본 절에서는 \texttt{GLMM}을 통한 분석을 제안한다.
-
 다중선형회귀모형은 설계행렬 $X$, 반응변수 벡터 $\mathbf{Y}$, 회귀계수 벡터 $\beta$, 오차 $\epsilon\sim\mathbf{N}_n(\mathbf{0},\,\sigma^2I_n)$에 대해 다음과 같은 모형으로 정의된다.
 \begin{equation*}
   \underset{n\times1}{\mathbf{Y}}=\underset{n\times p}{X}\underset{p\times1}{\beta}+\underset{n\times1}{\epsilon}
@@ -133,8 +140,7 @@
 이제 \texttt{GLMM}의 모수 추정과 검정에 대해 생각해보자. \texttt{GLMM} 모형(식 \ref{eq:glmm_model})에서 추정해야 할 모수로는 고정효과 $\beta$와 분산구조 $\Psi$가 있다. 여기서 $\gamma$는 랜덤효과로 고정된 미지의 상수가 아니므로 추정의 대상이 아니다. \texttt{GLM}에서와 마찬가지로 추정은 \texttt{MLE}(\texttt{Maximum Likelihood Estimation}; 최대가능도추정)을 이용하는데, $\mathbf{Y}$의 로그가능도함수를 구하면 분산구조 $\Psi$를 알고 있다는 가정 하에 베이즈 정리로부터 다음과 같이 구해진다.
 \begin{align}
   l(\beta)&=\log\int_{\mathbb{R}^q}f_{\mathbf{Y}\vert\gamma}(\mathbf{Y}\vert\gamma)f_\gamma(\gamma)\,d\gamma\\
-  &=\log\int_{\mathbb{R}^q}\exp\bigg(\sum_{i=1}^n[\mathbf{z}_i'\gamma Y_i-A(\mathbf{x}_i'\beta+\mathbf{z}_i'\gamma)]-\frac{\gamma'\Psi^{-1}\gamma}{2}\bigg)\,d\gamma\nonumber\\
-  &\qquad\qquad\qquad-\frac{1}{2}\log\det\Psi+\sum_{i=1}^n\mathbf{x}_i'\beta Y_i+\mathrm{const.}\nonumber
+  &=\log\int_{\mathbb{R}^q}\exp\bigg(\sum_{i=1}^n[\mathbf{z}_i'\gamma Y_i-A(\mathbf{x}_i'\beta+\mathbf{z}_i'\gamma)]-\frac{\gamma'\Psi^{-1}\gamma}{2}\bigg)\,d\gamma-\frac{1}{2}\log\det\Psi+\sum_{i=1}^n\mathbf{x}_i'\beta Y_i+\mathrm{const.}\nonumber
 \end{align}
 대부분의 경우 위 식의 적분이 닫힌 형태로 구해지지 않으므로 \texttt{adaptive GHQ}(\texttt{Gauss-Hermite Quadrature})나 라플라스 근사, \texttt{MCMC}(\texttt{Markov Chain Monte Carlo Simulation}), \texttt{MCEM}(\texttt{Monte Carlo Expectation Maximization}) 등을 통한 수치적분 기법으로 적분을 근사하여 계산한다 \texttt{\citep{capanu2013assessment}}. 실제로는 대부분의 경우 분산구조 $\Psi$ 또한 알지 못하므로 이를 동시에 추정해야 하고, 이를 위해 적당한 초기값에서 시작하여 조금씩 $\Psi$와 $\beta$를 \texttt{update}하는 반복 알고리즘이 사용된다.
 
@@ -144,7 +150,7 @@
   W&=(T\widehat{\beta}-\xi)'\{T[\nabla^2_\beta l(\widehat{\beta},\,\widehat{\Psi})]^{-1}T'\}^{-1}(T\widehat{\beta}-\xi)\\
   R&=\nabla_\beta l(\widetilde{\beta},\,\widetilde{\Psi})'[\nabla^2_\beta l(\widetilde{\beta},\,\widetilde{\Psi})]^{-1}\nabla_\beta l\widetilde{\beta},\,\widetilde{\Psi})
 \end{align}
-여기서 $\widehat{\beta}$와 $\widehat{\Psi}$는 각각 \texttt{full model}의 $\beta$와 $\Psi$의 \texttt{MLE}이며 $\widetilde{\beta}$와 $\widetilde{\Psi}$는 각각 귀무가설 하에서 \texttt{reduced model}의 $\beta$와 $\Psi$의 \texttt{MLE}이다. 그렇다면 $R,\,W,\,S\Rightarrow\chi^2(p-r)$임을 보일 수 있고, 이로부터 신뢰수준 $\alpha$의 (근사적인) 기각역을 정할 수 있다. 각 검정에는 나름의 장단점이 있는데, \texttt{LRT}의 경우 \texttt{full model}에서의 \texttt{MLE}와 \texttt{reduced model}에서의 \texttt{MLE}를 모두 계산하여야 하므로 비교적 많은 계산을 필요로 하지만 다른 두 검정에 비해 정확하며, \texttt{Wald} 검정과 \texttt{Rao} 검정의 경우 \texttt{full model}에서의 \texttt{MLE}와 \texttt{reduced model}에서의 \texttt{MLE} 중 하나만 계산하면 되지만 그 검정통계량 자체가 \texttt{LRT}의 근사이므로 비교적 덜 정확하다. 다만, 근사적으로 세 검정은 모두 동치임이 알려져 있다 \texttt{\citep{tuerlinckx2006statistical}}. 이와 비슷하게 랜덤효과의 분산 성분에 대하여서도 \texttt{LRT}를 수행할 수 있지만, 검정통계량의 극한분포가 카이제곱분포가 아니므로 특별한 경우가 아닌 이상 \texttt{MCMC}와 같은 시뮬레이션 기법을 통해 그 분포를 수치적으로 근사해야 하는 어려움이 있다 \texttt{\citep{zhang2008variance}}.
+여기서 $\widehat{\beta}$와 $\widehat{\Psi}$는 각각 \texttt{full model}의 $\beta$와 $\Psi$의 \texttt{MLE}이며 $\widetilde{\beta}$와 $\widetilde{\Psi}$는 각각 귀무가설 하에서 \texttt{reduced model}의 $\beta$와 $\Psi$의 \texttt{MLE}이다. 그렇다면 $\Lambda,\,W,\,R\Rightarrow\chi^2(p-r)$임을 보일 수 있고, 이로부터 신뢰수준 $\alpha$의 (근사적인) 기각역을 정할 수 있다. 각 검정에는 나름의 장단점이 있는데, \texttt{LRT}의 경우 \texttt{full model}에서의 \texttt{MLE}와 \texttt{reduced model}에서의 \texttt{MLE}를 모두 계산하여야 하므로 비교적 많은 계산을 필요로 하지만 다른 두 검정에 비해 정확하며, \texttt{Wald} 검정과 \texttt{Rao} 검정의 경우 \texttt{full model}에서의 \texttt{MLE}와 \texttt{reduced model}에서의 \texttt{MLE} 중 하나만 계산하면 되지만 그 검정통계량 자체가 \texttt{LRT}의 근사이므로 비교적 덜 정확하다. 다만, 근사적으로 세 검정은 모두 동치임이 알려져 있다 \texttt{\citep{tuerlinckx2006statistical}}. 이와 비슷하게 랜덤효과의 분산 성분에 대하여서도 \texttt{LRT}를 수행할 수 있지만, 검정통계량의 극한분포가 카이제곱분포가 아니므로 특별한 경우가 아닌 이상 \texttt{MCMC}와 같은 시뮬레이션 기법을 통해 그 분포를 수치적으로 근사해야 하는 어려움이 있다 \texttt{\citep{zhang2008variance}}.
 
 랜덤효과 $\gamma$의 경우, 전술하였다시피 이는 추정의 대상이 아니다. 대신 그 \texttt{realization}에 대한 예측은 가능한데, 관측값 $\mathbf{Y}$가 주어지고 고정효과 $\beta$와 분산구조 $\Psi$를 알고 있다면 랜덤효과에 대한 예측값으로 \texttt{MSPE}(\texttt{Mean Squared Prediction Error})를 최소화하는 조건부기댓값을 생각해볼 수 있다.
 \begin{equation}
@@ -276,6 +282,24 @@
 
 본 연구에서 최종적으로 적합하고자 하는 모형이 로지스틱 \texttt{GLMM}이므로 로지스틱 \texttt{GLM}에 \texttt{elastic net}을 사용하여 변수 선별을 진행하였다. \texttt{Hyperparameter tuning}은 10-\texttt{fold CV}를 통해 구한 \texttt{AUC}(\texttt{Area Under the Curve})를 기준으로 \texttt{1sd rule}을 적용하였다. \texttt{Tunning} 결과 $\alpha=0.15,\,\lambda=0.0118$가 선택되었으며 해당 $\alpha$와 $\beta$로 \texttt{elastic net}을 적합한 결과 20개의 변수 중 17개의 변수가 선별되었다. 그림 \ref{fig:e_net_tuning}과 표 \ref{tab:e_net_select}는 각각 \texttt{hyperparameter tuning} 결과와 변수 선별 결과를 나타낸 것이다.
 
+\begin{table}[tp]
+  \linespread{1}
+  \renewcommand{\familydefault}{\sfdefault}\normalfont
+  \centering
+  \caption{\bf Elatsic net으로 선별된 설명변수}
+  \begin{tabularx}{\linewidth}{cX}
+  \hline
+  \header 채널 & 주파수대\\
+  \hline
+  \ACL & delta, gamma, high gamma\\
+  \ACR & delta, theta, beta, gamma, high gamma\\
+  \PFCL & delta, theta, beta, gamma, high gamma\\
+  \PPCL & delta, theta, beta, high gamma\\
+  \hline
+  \end{tabularx}
+  \label{tab:e_net_select}
+\end{table}
+
 \begin{figure}[tp]
   \renewcommand{\familydefault}{\sfdefault}\normalfont
   \centering
@@ -382,24 +406,6 @@
   \linespread{1}
   \renewcommand{\familydefault}{\sfdefault}\normalfont
   \centering
-  \caption{\bf Elatsic net으로 선별된 설명변수}
-  \begin{tabularx}{\linewidth}{cX}
-  \hline
-  \header 채널 & 주파수대\\
-  \hline
-  \ACL & delta, gamma, high gamma\\
-  \ACR & delta, theta, beta, gamma, high gamma\\
-  \PFCL & delta, theta, beta, gamma, high gamma\\
-  \PPCL & delta, theta, beta, high gamma\\
-  \hline
-  \end{tabularx}
-  \label{tab:e_net_select}
-\end{table}
-
-\begin{table}[tp]
-  \linespread{1}
-  \renewcommand{\familydefault}{\sfdefault}\normalfont
-  \centering
   \caption{\bf GLMM 적합 결과 (고정효과)}
   \begin{tabularx}{\linewidth}{XXXXX}
   \hline
@@ -444,13 +450,13 @@
   \label{tb:glmm_rand}
 \end{table}
 
-이렇게 선별된 13개의 변량을 설명변수로 하여 식 \ref{eq:glmm_example}의 모형을 적합한 결과는 표 \ref{tb:glmm_fixed}, \ref{tb:glmm_rand}과 같다. 적합 결과를 보면, 우선 랜덤효과에서 피실험체 수준의 오차의 분산이 거의 0임을 알 수 있다. 이는 피실험체 수준의 오차보다 반복측정에 있어서의 개개의 세션에서의 오차가 지배적임을 함의한다. 다만, 사실은 피실험체 수준의 변동성이 세션 수준의 변동성으로 고려되어 적합되었을 가능성이 있으므로 섣불리 피실험체가 서로 동일하다고 결론지어서는 안될 것이다. 고정효과를 보면, \texttt{\PFCL}과 \texttt{\PPCL} 부위의 다양한 주파수대에 걸쳐 해당 \texttt{bandpower}가 피실험체의 행동 결과에 유의한 영향을 주고 있음을 알 수 있다. 그러나 그 방향성은 제각각인데, 예컨대 \texttt{\PPCL}의 \texttt{delta bandpower}와 \texttt{beta bandpower}는 \texttt{Hit}의 확률과 양의 상관을 가지는 방향으로 유의하고, 동일한 부위의 \texttt{high gamma bandpower}는 \texttt{Hit}의 확률과 음의 상관을 가지는 방향으로 유의하다.
+\texttt{GLMM} 모형을 적합한 결과는 표 \ref{tb:glmm_fixed}, \ref{tb:glmm_rand}과 같다. 적합 결과를 보면, 우선 랜덤효과에서 피실험체 수준의 오차의 분산이 거의 0임을 알 수 있다. 이는 피실험체 수준의 오차보다 반복측정에 있어서의 개개의 세션에서의 오차가 지배적임을 함의한다. 다만, 사실은 피실험체 수준의 변동성이 세션 수준의 변동성으로 고려되어 적합되었을 가능성이 있으므로 섣불리 피실험체가 서로 동일하다고 결론지어서는 안될 것이다. 고정효과를 보면, \texttt{\PFCL}과 \texttt{\PPCL} 부위의 다양한 주파수대에 걸쳐 해당 \texttt{bandpower}가 피실험체의 행동 결과에 유의한 영향을 주고 있음을 알 수 있다. 그러나 그 방향성은 제각각인데, 예컨대 \texttt{\PPCL}의 \texttt{delta bandpower}와 \texttt{beta bandpower}는 \texttt{Hit}의 확률과 양의 상관을 가지는 방향으로 유의하고, 동일한 부위의 \texttt{high gamma bandpower}는 \texttt{Hit}의 확률과 음의 상관을 가지는 방향으로 유의하다.
 
 \section{코드 및 분석도구}
 이상 채널 제거와 \texttt{LFP} 정규화, \texttt{bandpower} 계산은 \texttt{MATLAB}으로 하였다. 나머지 분석은 모두 \texttt{R}로 하였다. 분석에 사용한 코드는 \texttt{github} \url{https://github.com/eik4862/GLMM}에서 찾아볼 수 있다.
 
 \section{Acknowledgement}
-본 연구에서 사용한 자료는 한국과학기술연구원 뇌과학연구소의 한효빈, 이가은, 최지현이 실험을 통해 얻은 것으로 3/2/2020 허락을 받고 사용하였다. 동물 실험에 대한 규정 준수 및 관련된 자세한 사항은 \texttt{\cite{han2019functional}} 참조.
+본 연구에서 사용한 자료는 한국과학기술연구원 신경과학연구단의 한효빈, 이가은, 최지현이 실험을 통해 얻은 것으로 3/2/2020 허락을 받고 사용하였다. 동물 실험에 대한 규정 준수 및 관련된 자세한 사항은 \texttt{\cite{han2019functional}} 참조.
 
 \section{Technicality}
 
@@ -483,15 +489,13 @@
 \end{align}
 에서 $\int_{\mathbb{R}^d\setminus B(\mathbf{0},\,\delta)}fe^{-ag}\,d\mu=O(e^{-a\rho})$이다. 한편, $B(\mathbf{0},\,\delta)$에서는
 \begin{align}
-  \int_{B(\mathbf{0},\,\delta)}&fe^{-ag}\,d\mu\\
-  &\leq(1+\epsilon)f(\mathbf{0})\int_{\mathbb{R}} \exp\bigg(-\frac{a}{2}\mathbf{x}'[\nabla^2g(\mathbf{0})-2\epsilon I_d]\mathbf{x}\bigg)\,d\mu(\mathbf{x})\nonumber\\
+  \int_{B(\mathbf{0},\,\delta)}fe^{-ag}\,d\mu&\leq(1+\epsilon)f(\mathbf{0})\int_{\mathbb{R}} \exp\bigg(-\frac{a}{2}\mathbf{x}'[\nabla^2g(\mathbf{0})-2\epsilon I_d]\mathbf{x}\bigg)\,d\mu(\mathbf{x})\nonumber\\
   &=(1+\epsilon)f(\mathbf{0})\bigg(\frac{2\pi}{a}\bigg)^{d/2}\frac{1}{\sqrt{\det(\nabla^2 g(\mathbf{0})-2\epsilon I_d)}}\nonumber
 \end{align}
 으로 위로 유계이다. 이로부터
-\begin{align}
-  \limsup_{a\to\infty}a^{d/2}\int_{\mathbb{R}}&fe^{-ag}\,d\mu\\
-  &\leq(1+\epsilon)f(\mathbf{0})\frac{(2\pi)^{d/2}}{\sqrt{\det(\nabla^2 g(\mathbf{0})-2\epsilon I_d)}}\nonumber
-\end{align}
+\begin{equation}
+  \limsup_{a\to\infty}a^{d/2}\int_{\mathbb{R}}fe^{-ag}\,d\mu\leq(1+\epsilon)f(\mathbf{0})\frac{(2\pi)^{d/2}}{\sqrt{\det(\nabla^2 g(\mathbf{0})-2\epsilon I_d)}}\nonumber
+\end{equation}
 이고 $\epsilon$이 임의의 양수라는 점을 떠올리면
 \begin{equation}\label{eq:limsup}
   \limsup_{a\to\infty}a^{d/2}\int_{\mathbb{R}}fe^{-ag}\,d\mu\leq f(\mathbf{0})\frac{(2\pi)^{d/2}}{\sqrt{\det\nabla^2 g(\mathbf{0})}}
@@ -527,19 +531,17 @@
   \gamma\mapsto\sum_{i=1}^n[A(\mathbf{x}_i'\beta+\mathbf{z}_i'\gamma)-\mathbf{z}_i'\gamma Y_i]+\frac{\gamma'\Psi^{-1}\gamma}{2}
 \end{equation}
 가 $\gamma_*\in\mathbb{R}^q$에서 최댓값을 가진다고 하자. 그렇다면 평행이동을 통해 \texttt{GLMM}의 로그가능도에서의 적분은 다음과 같이 쓸 수 있다.
-\begin{align}
-  \int_{\mathbb{R}^q}\exp\bigg(\sum_{i=1}^n[\mathbf{z}_i'(\gamma+\gamma_*)Y_i-A(\mathbf{x}_i'\beta&+\mathbf{z}_i'(\gamma+\gamma_*))]\\
-  &-\frac{(\gamma+\gamma_*)'\Psi^{-1}(\gamma+\gamma_*)}{2}\bigg)\,d\gamma\nonumber
-\end{align}
+\begin{equation}
+  \int_{\mathbb{R}^q}\exp\bigg(\sum_{i=1}^n[\mathbf{z}_i'(\gamma+\gamma_*)Y_i-A(\mathbf{x}_i'\beta+\mathbf{z}_i'(\gamma+\gamma_*))]-\frac{(\gamma+\gamma_*)'\Psi^{-1}(\gamma+\gamma_*)}{2}\bigg)\,d\gamma
+\end{equation}
 라플라스 근사로부터 위의 적분은
 \begin{equation}
   \exp\bigg(-\sum_{i=1}^nA(\mathbf{x}_i'\beta)\bigg)\frac{(2\pi)^{d/2}}{\sqrt{\det(\sum_{i=1}^nA''(\mathbf{x}_i'\beta+\mathbf{z}_i'\gamma_*)\mathbf{z}_i\mathbf{z}_i'+\Psi^{-1})}}
 \end{equation}
 로 근사할 수 있으므로 곧 식 \ref{eq:GLMMloglik}를 최대화하는 것은 근사적으로
-\begin{align}
-  -\sum_{i=1}^nA(\mathbf{x}_i'\beta)-\frac{1}{2}\log\det\bigg(\sum_{i=1}^n&A''(\mathbf{x}_i'\beta+\mathbf{z}_i'\gamma_*)\mathbf{z}_i\mathbf{z}_i'+\Psi^{-1}\bigg)\\
-  &-\frac{1}{2}\log\det\Psi+\sum_{i=1}^n\mathbf{x}_i'\beta Y_i\nonumber
-\end{align}
+\begin{equation}
+  -\sum_{i=1}^nA(\mathbf{x}_i'\beta)-\frac{1}{2}\log\det\bigg(\sum_{i=1}^nA''(\mathbf{x}_i'\beta+\mathbf{z}_i'\gamma_*)\mathbf{z}_i\mathbf{z}_i'+\Psi^{-1}\bigg)-\frac{1}{2}\log\det\Psi+\sum_{i=1}^n\mathbf{x}_i'\beta Y_i
+\end{equation}
 를 $\beta,\,\Psi$에 대해 최대화하는 것과 같다.
 
 \subsection{GLMM의 고정효과에 대한 검정통계량의 극한분포}
@@ -585,12 +587,9 @@
   \sup_{||\mathbf{h}||\leq M}|Z_n(\mathbf{h})|\stackrel{\mathbf{P}_\vartheta}{\to}0
 \end{equation}이고 $\sqrt{n}(\widehat{\theta}_n-\vartheta),\,\sqrt{n}(\widetilde{\theta}_n-\vartheta)\stackrel{\mathbf{P}_\vartheta}{\to}0$임을 알 수 있다. 나아가, 위의 식 \ref{eq:uniformConv}가 충분히 천천히 $\infty$로 발산하는 임의의 수열 $\{M_n\}$에 대해서도 성립함을 쉽게 알 수 있다. 이러한 수열 $\{M_n\}$을 고정하면 앞선 결론으로부터 \texttt{MLE} $\widehat{\theta}_n$와 $\widetilde{\theta}_n$가 $B(\vartheta,\,M_n/\sqrt{n})$에 포함될 확률은 각각 1로 수렴하고, 따라서 $\Lambda_n$의 극한분포는 집합 $H_n$과 $H_n^0$을 각각 $H_n\cap B(\mathbf{0},\,M_n)$와 $H_n^0\cap B(\mathbf{0},\,M_n)$로 바꾸더라도 변함이 없다. 또한, 집합 $H_n\cap B(\mathbf{0},\,M_n)$와 $H_n^0\cap B(\mathbf{0},\,M_n)$이 각각 $H$와 $H^0$으로 수렴함도 자명하다. 이제 식 \ref{eq:uniformConv}으로부터 간단한 산수를 통해
 \begin{align}
-  \Lambda_n&=2\sup_{\mathbf{h}\in H_n}n\int_{\mathbb{R}^n}\log\frac{p_{\vartheta+\mathbf{h}/\sqrt{n}}}{p_{\vartheta}}\,d\mathbb{P}_n\\
-  &\qquad\qquad\qquad\qquad-2\sup_{\mathbf{h}\in H_n^0}n\int_{\mathbb{R}^n}\log\frac{p_{\vartheta+\mathbf{h}/\sqrt{n}}}{p_{\vartheta}}\,d\mathbb{P}_n\nonumber\\
-  &=2\sup_{\mathbf{h}\in H_n}\bigg(\mathbf{h}'\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-\frac{1}{2}\mathbf{h}'I_\vartheta\mathbf{h}\bigg)\nonumber\\
-  &\qquad\qquad\qquad\qquad-2\sup_{\mathbf{h}\in H_n^0}\bigg(\mathbf{h}'\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-\frac{1}{2}\mathbf{h}'I_\vartheta\mathbf{h}\bigg)+o_{\mathbf{P}_\vartheta}(1)\nonumber\\
-  &=\bigg|\bigg|I_\vartheta^{-1/2}\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-I_\vartheta^{1/2}H_0\bigg|\bigg|^2\nonumber\\
-  &\qquad\qquad\qquad\qquad-\bigg|\bigg|I_\vartheta^{-1/2}\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-I_\vartheta^{1/2}H\bigg|\bigg|^2+o_{\mathbf{P}_\vartheta}(1)\nonumber
+  \Lambda_n&=2\sup_{\mathbf{h}\in H_n}n\int_{\mathbb{R}^n}\log\frac{p_{\vartheta+\mathbf{h}/\sqrt{n}}}{p_{\vartheta}}\,d\mathbb{P}_n-2\sup_{\mathbf{h}\in H_n^0}n\int_{\mathbb{R}^n}\log\frac{p_{\vartheta+\mathbf{h}/\sqrt{n}}}{p_{\vartheta}}\,d\mathbb{P}_n\\
+  &=2\sup_{\mathbf{h}\in H_n}\bigg(\mathbf{h}'\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-\frac{1}{2}\mathbf{h}'I_\vartheta\mathbf{h}\bigg)-2\sup_{\mathbf{h}\in H_n^0}\bigg(\mathbf{h}'\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-\frac{1}{2}\mathbf{h}'I_\vartheta\mathbf{h}\bigg)+o_{\mathbf{P}_\vartheta}(1)\nonumber\\
+  &=\bigg|\bigg|I_\vartheta^{-1/2}\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-I_\vartheta^{1/2}H_0\bigg|\bigg|^2-\bigg|\bigg|I_\vartheta^{-1/2}\int_{\mathbb{R}^n}\dot{l}_\vartheta\,d\mathbb{G}_n-I_\vartheta^{1/2}H\bigg|\bigg|^2+o_{\mathbf{P}_\vartheta}(1)\nonumber
 \end{align}
 임을 안다. 마지막 등호는 \texttt{\cite{van2000asymptotic}}의 보조정리 7.13으로부터 성립하며, 여기서 $o_{\mathbf{P}_\vartheta}(1)$는 \texttt{little $o$ in probability}이다. 이제 \texttt{continuous mapping theorem}으로부터 증명이 끝난다.\hfill$\blacksquare$\\
 
@@ -613,21 +612,11 @@
 
 \noindent\textsf{\textbf{정리} 확률공간 $(\Omega,\,\mathcal{F},\,\mathbb{P})$와  확률벡터 $\mathbf{X}:\Omega\to\mathbb{R}^d$, sub-sigma field $\mathcal{E}\subseteq\mathcal{F}$를 생각하자. 그렇다면 임의의 $\mathcal{E}$-가측인 확률벡터 $\mathbf{Y}:\Omega\to\mathbb{R}^d$에 대해 $\mathbf{X},\,\mathbf{Y}\in L^2$라면 $\mathbf{E}([\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})]'\mathbf{Y})=0$이다.}
 
-\proof 이는
-\begin{align}
-  \mathbf{E}([\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})]'\mathbf{Y})&=\mathbf{E}(\mathbf{E}([\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})]'\mathbf{Y}\vert\mathcal{E}))\\
-  &=\mathbf{E}(\mathbf{E}(\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})\vert\mathcal{E})'\mathbf{Y})=\mathbf{0}\nonumber
-\end{align}
-에서 자명하다.\hfill$\blacksquare$\\
+\proof 이는 $\mathbf{E}([\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})]'\mathbf{Y})=\mathbf{E}(\mathbf{E}([\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})]'\mathbf{Y}\vert\mathcal{E}))=\mathbf{E}(\mathbf{E}(\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})\vert\mathcal{E})'\mathbf{Y})=\mathbf{0}$에서 자명하다.\hfill$\blacksquare$\\
 
 \noindent\textsf{\textbf{따름정리} 확률공간 $(\Omega,\,\mathcal{F},\,\mathbb{P})$와 확률벡터 $\mathbf{X}:\Omega\to\mathbb{R}^d$, sub-sigma field $\mathcal{E}\subseteq\mathcal{F}$에 대해 $\mathbf{X}\in L^2$라 하자. 그렇다면 $\argmin_{\mathbf{Y}\in L^2(\mathcal{E},\,\mathbb{P})}\mathbf{E}||\mathbf{X}-\mathbf{Y}||^2=\mathbf{E}(\mathbf{X}\vert\mathcal{E})$이다.}
 
-\proof 임의의 $\mathbf{Y}\in L^2(\mathcal{E},\,\mathbb{P})$에 대해
-\begin{align}
-  \mathbf{E}||\mathbf{X}-\mathbf{Y}||^2=\mathbf{E}||\mathbf{X}&-\mathbf{E}(\mathbf{X}\vert\mathcal{E})||^2+\mathbf{E}||\mathbf{E}(\mathbf{X}\vert\mathcal{E})-\mathbf{Y}||^2\\
-  &\qquad+2\mathbf{E}((\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E}))(\mathbf{E}(\mathbf{X}\vert\mathcal{E})-\mathbf{Y}))\nonumber
-\end{align}
-인데 여기서 $\mathbf{E}(\mathbf{X}\vert\mathcal{E})-\mathbf{Y}\in L^2(\mathcal{E},\,\mathbb{P})$이므로 위의 정리로부터 $\mathbf{E}||\mathbf{X}-\mathbf{Y}||^2\geq\mathbf{E}||\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})||^2$이다. 증명은 이로써 충분하다.\hfill$\blacksquare$\\
+\proof 임의의 $\mathbf{Y}\in L^2(\mathcal{E},\,\mathbb{P})$에 대해 $\mathbf{E}||\mathbf{X}-\mathbf{Y}||^2=\mathbf{E}||\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})||^2+\mathbf{E}||\mathbf{E}(\mathbf{X}\vert\mathcal{E})-\mathbf{Y}||^2+2\mathbf{E}((\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E}))(\mathbf{E}(\mathbf{X}\vert\mathcal{E})-\mathbf{Y}))$인데 여기서 $\mathbf{E}(\mathbf{X}\vert\mathcal{E})-\mathbf{Y}\in L^2(\mathcal{E},\,\mathbb{P})$이므로 위의 정리로부터 $\mathbf{E}||\mathbf{X}-\mathbf{Y}||^2\geq\mathbf{E}||\mathbf{X}-\mathbf{E}(\mathbf{X}\vert\mathcal{E})||^2$이다. 증명은 이로써 충분하다.\hfill$\blacksquare$\\
 
 이상의 결과로부터 \texttt{MSPE}를 최소화하는 $\gamma$의 예측값은 $\mathbf{E}_{\beta,\,\Psi}(\gamma\vert\mathbf{Y})$임이 분명하다.
 
@@ -679,15 +668,13 @@
 
 \texttt{$k$-fold CV}는 기계학습 분야에서 널리 사용되는 검증 내지는 성능 측정 방법으로, 이미 \texttt{realize}되어 완전히 알고 있는 관측값 $(\mathbf{X}_i,\,G_i)\iid f$를 랜덤하게 분할하고, 이 중 일부만으로 $\phi$를 적합한 다음, 사용하지 않은 나머지를 통해 추정하고자 하는 통계량을 계산한다.\footnote{기계학습의 관점에서는 이때의 관측값 중 $\phi$의 적합에 사용되는 관측값이 \texttt{train dataset}이고, 통계량의 계산에 사용되는 관측값이 \texttt{test dataset}이다. 또한, 이때 $\phi$를 적합하는 과정을 분류기를 훈련시킨다고 이른다.} 보다 구체적으로, \texttt{$k$-fold CV}를 통해 앞서 소개한 \texttt{TPR}을 구하는 상황을 생각하자. 앞선 논의와 동일하게 $N$개의 관측값의 집합을 $\mathcal{D}$라 하고, 적당한 $k$를 택하여 (간결한 논의를 위해 $N$이 $k$의 배수라 하자) $\mathcal{D}$를 랜덤하게 $k$개의 부분집합 $\mathcal{V}_1,\,\cdots,\,\mathcal{V}_k$로 분할한다. 나아가, 각 $i\leq k$에 대해 $\mathcal{D}\setminus\mathcal{V}_i$를 통해 적합한 $\phi$를 $\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}$라 하자. 그렇다면 대수의 법칙으로부터
 \begin{align}
-  &\frac{1}{N/k}\sum_{(\mathbf{X},\,G)\in\mathcal{V}_i}\mathbf{1}\{\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\}\\
-  &\qquad\qquad\qquad\qquad\approx\mathbf{P}(\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\vert\mathcal{D}\setminus\mathcal{V}_i)\nonumber\\
+  &\frac{1}{N/k}\sum_{(\mathbf{X},\,G)\in\mathcal{V}_i}\mathbf{1}\{\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\}\approx\mathbf{P}(\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\vert\mathcal{D}\setminus\mathcal{V}_i)\\
   &\frac{1}{N/k}\sum_{(\mathbf{X},\,G)\in\mathcal{V}_i}\mathbf{1}\{G=1\}\approx\mathbf{P}(G=1\vert\mathcal{D}\setminus\mathcal{V}_i)
 \end{align}
 이고, 곧
 \begin{align}
-  \frac{1}{k}\sum_{i=1}^k&\frac{\sum_{(\mathbf{X},\,G)\in\mathcal{V}_i}\mathbf{1}\{\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\}}{\sum_{(\mathbf{X},\,G)\in\mathcal{V}_i}\mathbf{1}\{G=1\}}\\
-  &\qquad\qquad\qquad\approx\frac{1}{k}\sum_{i=1}^k\frac{\mathbf{P}(\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\vert\mathcal{D}\setminus\mathcal{V}_i)}{\mathbf{P}(G=1\vert\mathcal{D}\setminus\mathcal{V}_i)}\nonumber\\
-  &\qquad\qquad\qquad\approx\mathbf{E}_\mathcal{D}\bigg(\frac{\mathbf{P}(\widehat{\phi}(X)=1,\,G=1\vert\mathcal{D})}{\mathbf{P}(G=1\vert\mathcal{D})}\bigg)\nonumber
+  \frac{1}{k}\sum_{i=1}^k\frac{\sum_{(\mathbf{X},\,G)\in\mathcal{V}_i}\mathbf{1}\{\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\}}{\sum_{(\mathbf{X},\,G)\in\mathcal{V}_i}\mathbf{1}\{G=1\}}&\approx\frac{1}{k}\sum_{i=1}^k\frac{\mathbf{P}(\widehat{\phi}_{\mathcal{D}\setminus\mathcal{V}_i}(\mathbf{X})=1,\,G=1\vert\mathcal{D}\setminus\mathcal{V}_i)}{\mathbf{P}(G=1\vert\mathcal{D}\setminus\mathcal{V}_i)}\\
+  &\approx\mathbf{E}_\mathcal{D}\bigg(\frac{\mathbf{P}(\widehat{\phi}(X)=1,\,G=1\vert\mathcal{D})}{\mathbf{P}(G=1\vert\mathcal{D})}\bigg)\nonumber
 \end{align}
 가 되어 \texttt{$k$-fold CV}를 통해 계산한 \texttt{TPR}은 식 \ref{eq:tprEst}에서의 $\widehat{\mathrm{TPR}}$의 근사가 된다. 이와 유사한 방법으로 \texttt{ACC}나 \texttt{MCC}와 같은 보다 복잡한 통계량에 대해서도 \texttt{$k$-fold CV}를 통한 추정을 \texttt{justify}할 수 있다.
 
@@ -724,8 +711,7 @@
 
 \texttt{Naive Bayes} 분류기는 $G$가 조건부로 주어졌을 때 $\mathbf{X}$의 각 성분이 서로 조건부독립임을 가정한다. 그렇다면 베이즈 정리로부터 다음이 성립한다.
 \begin{align}
-  \mathbf{P}(G=g\vert&\mathbf{X}=\mathbf{x})\\
-  &=\frac{\mathbf{P}(G=g)f_{X_1,\,\cdots,\,X_d\vert G=g}(x_1,\,\cdots,\,x_d)}{f_{\mathbf{X}}(\mathbf{x})}\nonumber\\
+  \mathbf{P}(G=g\vert\mathbf{X}=\mathbf{x})&=\frac{\mathbf{P}(G=g)f_{X_1,\,\cdots,\,X_d\vert G=g}(x_1,\,\cdots,\,x_d)}{f_{\mathbf{X}}(\mathbf{x})}\nonumber\\
   &=\frac{\mathbf{P}(G=g)f_{X_1\vert G=g}(x_1)f_{X_2,\,\cdots,\,X_d\vert G=g,\,X_1=x_1}(x_2,\,\cdots,\,x_d)}{f_{\mathbf{X}}(\mathbf{x})}\nonumber\\
   &=\frac{\mathbf{P}(G=g)f_{X_1\vert G=g}(x_1)f_{X_2,\,\cdots,\,X_d\vert G=g}(x_2,\,\cdots,\,x_d)}{f_{\mathbf{X}}(\mathbf{x})}\nonumber\\
   &=\cdots\nonumber\\
@@ -792,6 +778,7 @@
 \end{equation}
 로 쓸 수 있다는 사실로부터 \texttt{random forest}는 가중치를 $1/k$로 균등하게 부여하는 \texttt{KNN}에서 가중치의 부여 방식만 바뀌었음을 알 수 있다. 그렇다면 앞서 \texttt{KNN}이 베이즈 분류기의 근사임을 보였으므로 \texttt{random forest} 또한 베이즈 분류기의 근사가 됨은 분명하다.
 
+\fakesection{참고문헌}
 \ttfamily
 \bibliography{refs}
 

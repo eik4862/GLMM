@@ -1,26 +1,27 @@
 \babel@toc {english}{}
 \contentsline {section}{서론}{2}{Doc-Start}% 
 \contentsline {section}{모형 적합}{2}{Doc-Start}% 
-\contentsline {subsection}{GLMM 모형}{2}{Doc-Start}% 
+\contentsline {subsection}{GLMM 모형}{2}{section*.1}% 
 \contentsline {subsection}{자료 전처리}{6}{equation.0.12}% 
 \contentsline {paragraph}{이상 채널 제거}{6}{equation.0.12}% 
-\contentsline {paragraph}{LFP 정규화}{7}{figure.caption.2}% 
-\contentsline {paragraph}{Bandpower 계산}{7}{figure.caption.2}% 
-\contentsline {subsection}{탐색적 자료분석}{9}{table.caption.3}% 
-\contentsline {subsection}{GLMM 모형 적합}{11}{figure.caption.4}% 
-\contentsline {subsection}{CV 및 시뮬레이션}{12}{figure.caption.5}% 
-\contentsline {paragraph}{Naive Bayes}{13}{figure.caption.6}% 
-\contentsline {paragraph}{LDA}{13}{figure.caption.6}% 
-\contentsline {paragraph}{KNN}{13}{figure.caption.6}% 
-\contentsline {paragraph}{ANN}{15}{figure.caption.6}% 
-\contentsline {paragraph}{로지스틱 회귀}{15}{figure.caption.6}% 
-\contentsline {paragraph}{Random forest}{16}{table.caption.7}% 
-\contentsline {section}{결과}{17}{equation.0.20}% 
-\contentsline {section}{코드 및 분석도구}{17}{table.caption.11}% 
-\contentsline {section}{Acknowledgement}{17}{table.caption.11}% 
-\contentsline {section}{Technicality}{20}{table.caption.11}% 
-\contentsline {subsection}{라플라스 근사를 이용한 GLMM의 로그가능도 근사}{20}{table.caption.11}% 
-\contentsline {subsection}{GLMM의 고정효과에 대한 검정통계량의 극한분포}{23}{equation.0.37}% 
-\contentsline {subsection}{GLMM의 랜덤효과에 대한 예측값}{25}{equation.0.49}% 
-\contentsline {subsection}{이진 분류 문제와 CV}{26}{equation.0.51}% 
-\contentsline {subsection}{베이즈 분류기}{29}{equation.0.63}% 
+\contentsline {paragraph}{LFP 정규화}{6}{figure.caption.3}% 
+\contentsline {paragraph}{Bandpower 계산}{6}{figure.caption.3}% 
+\contentsline {subsection}{탐색적 자료분석}{8}{table.caption.4}% 
+\contentsline {subsection}{GLMM 모형 적합}{10}{figure.caption.5}% 
+\contentsline {subsection}{CV 및 시뮬레이션}{11}{figure.caption.7}% 
+\contentsline {paragraph}{Naive Bayes}{12}{figure.caption.8}% 
+\contentsline {paragraph}{LDA}{12}{figure.caption.8}% 
+\contentsline {paragraph}{KNN}{12}{figure.caption.8}% 
+\contentsline {paragraph}{ANN}{14}{figure.caption.8}% 
+\contentsline {paragraph}{로지스틱 회귀}{14}{figure.caption.8}% 
+\contentsline {paragraph}{Random forest}{15}{table.caption.9}% 
+\contentsline {section}{결과}{15}{equation.0.20}% 
+\contentsline {section}{코드 및 분석도구}{18}{table.caption.12}% 
+\contentsline {section}{Acknowledgement}{18}{table.caption.12}% 
+\contentsline {section}{Technicality}{18}{table.caption.12}% 
+\contentsline {subsection}{라플라스 근사를 이용한 GLMM의 로그가능도 근사}{18}{section*.13}% 
+\contentsline {subsection}{GLMM의 고정효과에 대한 검정통계량의 극한분포}{20}{equation.0.35}% 
+\contentsline {subsection}{GLMM의 랜덤효과에 대한 예측값}{22}{equation.0.47}% 
+\contentsline {subsection}{이진 분류 문제와 CV}{23}{equation.0.47}% 
+\contentsline {subsection}{베이즈 분류기}{25}{equation.0.59}% 
+\contentsline {section}{참고문헌}{29}{section.1}% 

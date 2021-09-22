@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{Doc-Start}{서론}{}% 1
+\BOOKMARK [1][-]{Doc-Start}{모형 적합}{}% 2
+\BOOKMARK [2][-]{section*.1}{GLMM 모형}{Doc-Start}% 3
+\BOOKMARK [2][-]{equation.0.12}{자료 전처리}{Doc-Start}% 4
+\BOOKMARK [2][-]{table.caption.4}{탐색적 자료분석}{Doc-Start}% 5
+\BOOKMARK [2][-]{figure.caption.5}{GLMM 모형 적합}{Doc-Start}% 6
+\BOOKMARK [2][-]{figure.caption.7}{CV 및 시뮬레이션}{Doc-Start}% 7
+\BOOKMARK [1][-]{equation.0.20}{결과}{}% 8
+\BOOKMARK [1][-]{table.caption.12}{코드 및 분석도구}{}% 9
+\BOOKMARK [1][-]{table.caption.12}{Acknowledgement}{}% 10
+\BOOKMARK [1][-]{table.caption.12}{Technicality}{}% 11
+\BOOKMARK [2][-]{section*.13}{라플라스 근사를 이용한 GLMM의 로그가능도 근사}{table.caption.12}% 12
+\BOOKMARK [2][-]{equation.0.35}{GLMM의 고정효과에 대한 검정통계량의 극한분포}{table.caption.12}% 13
+\BOOKMARK [2][-]{equation.0.47}{GLMM의 랜덤효과에 대한 예측값}{table.caption.12}% 14
+\BOOKMARK [2][-]{equation.0.47}{이진 분류 문제와 CV}{table.caption.12}% 15
+\BOOKMARK [2][-]{equation.0.59}{베이즈 분류기}{table.caption.12}% 16
+\BOOKMARK [1][-]{section.1}{참고문헌}{}% 17
